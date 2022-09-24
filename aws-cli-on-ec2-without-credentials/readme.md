@@ -22,4 +22,4 @@ Uses IMDSv2 flow to fetch temporary credentials
 ## When no IAM role is attached to the instance
 IMDSv2 flow fails when there is no IAM role. This is because, in the above flow the 2nd step fails when there is no IAM role attached. So its just because of how the aws cli is built
 
-- Dump file: dump2-withoutiamrole
+- Dump file: dump2-without_iam_role
