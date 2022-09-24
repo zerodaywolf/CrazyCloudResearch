@@ -1,0 +1,75 @@
+06:43:20.101803 IP ip-172-31-22-18.ec2.internal.43422 > instance-data.ec2.internal.http: Flags [P.], seq 214679438:214679671, ack 2494216712, win 491, options [nop,nop,TS val 3310026926 ecr 4009475562], length 233: HTTP: PUT /latest/api/token HTTP/1.1
+E.....@.@..............P.............>.....
+.K......PUT /latest/api/token HTTP/1.1
+Host: 169.254.169.254
+Accept-Encoding: identity
+x-aws-ec2-metadata-token-ttl-seconds: 21600
+User-Agent: aws-cli/1.19.1 Python/3.9.2 Linux/5.10.0-14-cloud-amd64 botocore/1.20.0
+Content-Length: 0
+
+
+06:43:20.102997 IP instance-data.ec2.internal.http > ip-172-31-22-18.ec2.internal.43422: Flags [P.], seq 1:238, ack 233, win 219, options [nop,nop,TS val 4009475562 ecr 3310026926], length 237: HTTP: HTTP/1.0 200 OK
+E..!.O@....Y.........P.........w...........
+.....K..HTTP/1.0 200 OK
+Content-Length: 56
+Content-Type: text/plain
+Date: Sat, 24 Sep 2022 06:43:20 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+AQAA<REDACTED>
+06:43:20.104218 IP ip-172-31-22-18.ec2.internal.43424 > instance-data.ec2.internal.http: Flags [P.], seq 1578357270:1578357549, ack 2047201103, win 491, options [nop,nop,TS val 3310026928 ecr 4009475563], length 279: HTTP: GET /latest/meta-data/iam/security-credentials/ HTTP/1.1
+E..K.B@.@..=...........P^...z..O.....l.....
+.K......GET /latest/meta-data/iam/security-credentials/ HTTP/1.1
+Host: 169.254.169.254
+Accept-Encoding: identity
+x-aws-ec2-metadata-token: AQAAA<REDACTED>
+User-Agent: aws-cli/1.19.1 Python/3.9.2 Linux/5.10.0-14-cloud-amd64 botocore/1.20.0
+
+
+06:43:20.104992 IP instance-data.ec2.internal.http > ip-172-31-22-18.ec2.internal.43424: Flags [P.], seq 1:275, ack 279, win 219, options [nop,nop,TS val 4009475563 ecr 3310026928], length 274: HTTP: HTTP/1.0 200 OK
+E..F..@...k..........P..z..O^..-....>......
+.....K..HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Content-Length: 25
+Content-Type: text/plain
+Date: Sat, 24 Sep 2022 06:43:20 GMT
+Last-Modified: Sat, 24 Sep 2022 06:31:10 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+ec2readonlyaccess-exprmnt
+06:43:20.106063 IP ip-172-31-22-18.ec2.internal.43426 > instance-data.ec2.internal.http: Flags [P.], seq 908146365:908146669, ack 1757222662, win 491, options [nop,nop,TS val 3310026930 ecr 4009475563], length 304: HTTP: GET /latest/meta-data/iam/security-credentials/ec2readonlyaccess-exprmnt HTTP/1.1
+E..d..@.@..............P6!6.h..............
+.K......GET /latest/meta-data/iam/security-credentials/ec2readonlyaccess-exprmnt HTTP/1.1
+Host: 169.254.169.254
+Accept-Encoding: identity
+x-aws-ec2-metadata-token: AQAAA<REDACTED>
+User-Agent: aws-cli/1.19.1 Python/3.9.2 Linux/5.10.0-14-cloud-amd64 botocore/1.20.0
+
+
+06:43:20.107169 IP instance-data.ec2.internal.http > ip-172-31-22-18.ec2.internal.43426: Flags [P.], seq 1:1674, ack 304, win 219, options [nop,nop,TS val 4009475563 ecr 3310026930], length 1673: HTTP: HTTP/1.0 200 OK
+E....j@..............P..h...6!7.....o5.....
+.....K..HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Content-Length: 1422
+Content-Type: text/plain
+Date: Sat, 24 Sep 2022 06:43:20 GMT
+Last-Modified: Sat, 24 Sep 2022 06:31:10 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+{
+  "Code" : "Success",
+  "LastUpdated" : "2022-09-24T06:32:00Z",
+  "Type" : "AWS-HMAC",
+  "AccessKeyId" : "<REDACTED>",
+  "SecretAccessKey" : "<REDACTED>",
+  "Token" : "<REDACTED>",
+  "Expiration" : "2022-09-24T12:57:34Z"
+}
+
+

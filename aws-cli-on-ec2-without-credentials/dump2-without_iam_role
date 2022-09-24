@@ -1,0 +1,56 @@
+admin@ip-172-31-22-18:~$ sudo tcpdump -A -s 0 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+07:30:52.787006 IP ip-172-31-22-18.ec2.internal.43470 > instance-data.ec2.internal.http: Flags [P.], seq 504178:504411, ack 1181745648, win 491, options [nop,nop,TS val 3312879611 ecr 4009760831], length 233: HTTP: PUT /latest/api/token HTTP/1.1
+E.....@.@.j............P...rFp.......>.....
+.v.....?PUT /latest/api/token HTTP/1.1
+Host: 169.254.169.254
+Accept-Encoding: identity
+x-aws-ec2-metadata-token-ttl-seconds: 21600
+User-Agent: aws-cli/1.19.1 Python/3.9.2 Linux/5.10.0-14-cloud-amd64 botocore/1.20.0
+Content-Length: 0
+
+
+07:30:52.788430 IP instance-data.ec2.internal.http > ip-172-31-22-18.ec2.internal.43470: Flags [P.], seq 1:238, ack 233, win 219, options [nop,nop,TS val 4009760831 ecr 3312879611], length 237: HTTP: HTTP/1.0 200 OK
+E..!.`@....H.........P..Fp.....[...........
+...?.v..HTTP/1.0 200 OK
+Content-Length: 56
+Content-Type: text/plain
+Date: Sat, 24 Sep 2022 07:30:52 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+AQAA<REDACTED>
+07:30:52.789581 IP ip-172-31-22-18.ec2.internal.43472 > instance-data.ec2.internal.http: Flags [P.], seq 2619985381:2619985660, ack 3911783988, win 491, options [nop,nop,TS val 3312879613 ecr 4009760831], length 279: HTTP: GET /latest/meta-data/iam/security-credentials/ HTTP/1.1
+E..K..@.@.&f...........P.)...).4.....l.....
+.v.....?GET /latest/meta-data/iam/security-credentials/ HTTP/1.1
+Host: 169.254.169.254
+Accept-Encoding: identity
+x-aws-ec2-metadata-token: AQAA<REDACTED>
+User-Agent: aws-cli/1.19.1 Python/3.9.2 Linux/5.10.0-14-cloud-amd64 botocore/1.20.0
+
+
+07:30:52.790388 IP instance-data.ec2.internal.http > ip-172-31-22-18.ec2.internal.43472: Flags [P.], seq 1:526, ack 279, win 219, options [nop,nop,TS val 4009760831 ecr 3312879613], length 525: HTTP: HTTP/1.0 404 Not Found
+E..A..@..............P...).4.).............
+...?.v..HTTP/1.0 404 Not Found
+Content-Length: 337
+Content-Type: text/html
+Date: Sat, 24 Sep 2022 07:30:52 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>404 - Not Found</title>
+ </head>
+ <body>
+  <h1>404 - Not Found</h1>
+ </body>
+</html>
+
+
